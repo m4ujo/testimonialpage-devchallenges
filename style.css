@@ -47,7 +47,6 @@ body {
   font-size: 1.25rem;
   color: #52525a;
   width: 560px;
-  /* width: 280px; */
   line-height: 1.6;
   margin-bottom: 2.5rem;
 }
@@ -75,10 +74,11 @@ body {
 .row {
   width: 100%;
   display: flex;
+  flex-direction: column;
 }
 
-.row:nth-child(1) {
-  justify-content: end;
+.row:nth-child(1) .card {
+  align-self: end;
 }
 
 .card {
@@ -112,17 +112,5 @@ body {
 @media screen and (min-width: 800px) {
   .main {
     flex-direction: row;
-  }
-  .row:nth-child(1) {
-    align-items: end;
-  }
-}
-
-@media screen and (min-width: 800px) {
-  .main {
-    flex-direction: row;
-  }
-  .row:nth-child(1) {
-    align-items: end;
   }
 }
